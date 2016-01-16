@@ -15,9 +15,13 @@
                         </ul>
                     </li>
                 </ul>
-                <br/>
-                <hr/>
-                <br/>
+                <div class="page-header" style="text-align:center;">
+                    <% for (var nav, i=0; nav = navs[i]; i++) { %>
+                        <% if (route.id==nav.route) { %>
+                            <h1><%=nav.name%></h1>
+                        <% } %>
+                    <% } %>
+                </div>                    
                 <blockquote>
                     <p>
                         <%- partial( 'exercises/' + route.id + '.ejs') %>

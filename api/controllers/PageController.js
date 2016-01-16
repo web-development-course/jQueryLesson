@@ -11,27 +11,9 @@ module.exports = {
     var param = req.allParams();
 
     var navs = [
-        {route: 'position', name: 'Position'},
+        {route: 'position', name: 'Positioning'},
         {route: 'display', name: 'Display'},
-        {route: 'color', name: 'Color'},
-        {route: 'position', name: 'Position'},
-        {route: 'display', name: 'Display'},
-        {route: 'color', name: 'Color'},
-        {route: 'position', name: 'Position'},
-        {route: 'display', name: 'Display'},
-        {route: 'color', name: 'Color'},
-        {route: 'position', name: 'Position'},
-        {route: 'display', name: 'Display'},
-        {route: 'color', name: 'Color'},
-        {route: 'position', name: 'Position'},
-        {route: 'display', name: 'Display'},
-        {route: 'color', name: 'Color'},
-        {route: 'position', name: 'Position'},
-        {route: 'display', name: 'Display'},
-        {route: 'color', name: 'Color'},
-        {route: 'position', name: 'Position'},
-        {route: 'display', name: 'Display'},
-        {route: 'color', name: 'Color'},
+        {route: 'color', name: 'Colors'},
     ];
 
 
