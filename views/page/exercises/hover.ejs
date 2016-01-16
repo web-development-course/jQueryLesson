@@ -1,0 +1,50 @@
+<p>
+    Change style only on mouse hover<br/>
+    to hide or show element on hover, use opacity (not visibility or display!);
+    <br/>
+    <a href="http://lmgtfy.com/?q=css+opacity" target="_blank">View in W3Schools</a>
+    <br/>
+    <br/>
+    Common Usage:
+    <pre>
+.element:hover: {
+    some: thing;
+}
+opacity: 0;  (transparent)
+opacity: 0.5 (semi transparent)
+opacity: 1;  (opaque)
+
+</pre>
+</p>
+<style>
+   .element {
+       width: 100px;
+       height: 50px;
+       display: block;
+    }
+    
+    .sample.element-1 {
+    }
+    .sample.element-1:hover {
+        background: white;
+    }
+    .sample.element-2 {
+        opacity: 0.5;
+    }
+    .sample.element-2:hover {
+        opacity: 1;
+    }
+    .sample.element-3 {
+        opacity: 0;
+    }
+    .sample.element-3:hover {
+        opacity: 1;
+    }
+    .sample.element-4 {
+        display: block;
+    }
+    .sample.element-4:hover {
+        display: none;
+    }
+    
+</style>
