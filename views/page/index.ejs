@@ -1,6 +1,6 @@
 <div class="container full-height">
     <div class="row full-height">
-        <div class="box col-md-2">
+        <div class="box col-md-4">
             <div class="page-container">
                 <ul class="nav nav-pills">
                     <li role="presentation" class="<%= route.id=='welcome' ? 'active' : ''%>"><a href="welcome">CSS Lesson</a></li>
@@ -16,33 +16,36 @@
                     </li>
                 </ul>
                 <br/>
-                <div class="panel panel-default">
-                    <div class="panel-body">
+                <hr/>
+                <br/>
+                <blockquote>
+                    <p>
                         <%- partial( 'exercises/' + route.id + '.ejs') %>
+                    </p>
+                </blockquote>
+            </div>
+        </div>
+        <div class="box col-md-8">
+            <div class="row half-height">        
+                <div class="box col-md-12">
+                    <div class="page-container page-container-sample">
+                        <div class="element element-1 sample">Sample Element 1</div>
+                        <div class="element element-2 sample">Sample Element 2</div>
+                        <div class="element element-3 sample">Sample Element 3</div>
+                        <div class="element element-4 sample">Sample Element 4</div>
+                    </div>
+                </div>
+            </div>
+            <div class="row half-height">        
+                <div class="box col-md-12">
+                    <div class="page-container page-container-practice">
+                        <div class="element element-1 edit-me">Practice Element 1</div>
+                        <div class="element element-2 edit-me">Practice Element 2</div>
+                        <div class="element element-3 edit-me">Practice Element 3</div>
+                        <div class="element element-4 edit-me">Practice Element 4</div>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="box col-md-5">
-            <div class="page-container">
-                <div class="element element-1 sample">Sample Element 1</div>
-                <div class="element element-2 sample">Sample Element 2</div>
-                <div class="element element-3 sample">Sample Element 3</div>
-                <div class="element element-4 sample">Sample Element 4</div>
-            </div>
-        </div>
-        <div class="box col-md-5">
-            <div class="page-container">
-                <div class="element element-1 edit-me">Practice Element 1</div>
-                <div class="element element-2 edit-me">Practice Element 2</div>
-                <div class="element element-3 edit-me">Practice Element 3</div>
-                <div class="element element-4 edit-me">Practice Element 4</div>
-            </div>
-        </div>
     </div>
 </div>
-<script>
-$(document).ready(function(){
-    $('.dropdown-toggle').dropdown();
-});
-</script>

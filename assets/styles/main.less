@@ -3,30 +3,32 @@ body,
 .box,
 .full-height {
     height: 100%;
-    padding: 0;
+}
+.half-height {
+    height: 50%;
 }
 
 .page-container {
     border: 1px solid #ccc;
     border-radius: 4px;
     background: white;
-    width: ~"calc(100% - 10px)";
+    width: 100%;
     height: ~"calc(100% - 10px)";
     margin: 5px 0;
-    padding: 10px;
     box-sizing: border-box;
-
-    .element {
-        width: 80px;
-        height: 80px;
-        border: 1px solid #ccc;
-        border-radius: 4px;
-        padding: 10px;
-        box-sizing: border-box;
-    }
-    
-    .element-1 {
-        
-    }
+    position: relative;
 }
 
+.element-1 {
+    background: lightseagreen;        
+}
+.element-2 {
+    background: lightblue;        
+}
+.element-3 {
+    background: lightcoral;        
+}
+.element-4 {
+    background: lightyellow;        
+}
+    
