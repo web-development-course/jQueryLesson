@@ -9,8 +9,33 @@ module.exports = {
 
   index: function (req, res, next) {
     var param = req.allParams();
-    res.locals.route = param;
-    res.view({ route: param });
+
+    var navs = [
+        {route: 'position', name: 'Position'},
+        {route: 'display', name: 'Display'},
+        {route: 'color', name: 'Color'},
+        {route: 'position', name: 'Position'},
+        {route: 'display', name: 'Display'},
+        {route: 'color', name: 'Color'},
+        {route: 'position', name: 'Position'},
+        {route: 'display', name: 'Display'},
+        {route: 'color', name: 'Color'},
+        {route: 'position', name: 'Position'},
+        {route: 'display', name: 'Display'},
+        {route: 'color', name: 'Color'},
+        {route: 'position', name: 'Position'},
+        {route: 'display', name: 'Display'},
+        {route: 'color', name: 'Color'},
+        {route: 'position', name: 'Position'},
+        {route: 'display', name: 'Display'},
+        {route: 'color', name: 'Color'},
+        {route: 'position', name: 'Position'},
+        {route: 'display', name: 'Display'},
+        {route: 'color', name: 'Color'},
+    ];
+
+
+    res.view({ route: param, navs: navs });
   }
 
 };

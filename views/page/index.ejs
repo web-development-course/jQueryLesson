@@ -1,6 +1,47 @@
-<h1> CSS Lesson </h1>
-
-<div class="left"
-
-<%- partial( route.id + '.ejs') %>
-<%- partial( route.id + '.ejs') %>
+<div class="container full-height">
+    <div class="row full-height">
+        <div class="box col-md-2">
+            <div class="page-container">
+                <ul class="nav nav-pills">
+                    <li role="presentation" class="<%= route.id=='welcome' ? 'active' : ''%>"><a href="welcome">CSS Lesson</a></li>
+                    <li role="presentation" class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+                        Choose a Page <span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <% for (var nav, i=0; nav = navs[i]; i++) { %>
+                                <li role="presentation" class="<%= route.id==nav.route ? 'active' : ''%>"><a href="<%=nav.route%>"><%=nav.name%></a></li>
+                            <% } %>
+                        </ul>
+                    </li>
+                </ul>
+                <br/>
+                <div class="panel panel-default">
+                    <div class="panel-body">
+                        <%- partial( 'exercises/' + route.id + '.ejs') %>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="box col-md-5">
+            <div class="page-container">
+                <div class="element element-1 sample"></div>
+                <div class="element element-2 sample"></div>
+                <div class="element element-3 sample"></div>
+                <div class="element element-4 sample"></div>
+            </div>
+        </div>
+        <div class="box col-md-5">
+            <div class="page-container">
+                <div class="element element-1 edit-me"></div>
+                <div class="element element-2 edit-me"></div>
+                <div class="element element-3 edit-me"></div>
+                <div class="element element-4 edit-me"></div>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+$(document.ready(function(){
+    $('.dropdown-toggle').dropdown();
+}));
