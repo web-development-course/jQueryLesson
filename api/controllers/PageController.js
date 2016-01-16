@@ -21,6 +21,8 @@ module.exports = {
         {route: 'border', name: 'Borders'},
         {route: 'overflow', name: 'Overflow'},
         {route: 'float', name: 'Floats'},
+        {route: 'hover', name: 'Hover and Opacity'},
+        {route: 'cursor', name: 'Mouse Cursor'},
     ];
 
 
