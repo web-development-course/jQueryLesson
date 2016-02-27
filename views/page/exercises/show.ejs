@@ -1,0 +1,26 @@
+<p>
+    Hide elements by clicking them
+    <br/>
+    <a href="http://lmgtfy.com/?q=jquery+hide+show&l=1" target="_blank">View in W3Schools</a>
+    <br/>
+    <br/>
+    Common Usage:
+    <pre>
+$('.some-elem').show();
+$('.some-elem').hide();
+$('.some-elem').toggle();
+</pre>
+</p>
+<script>
+  $(function() {
+    var selector = ".page-container-sample .thumbnail";
+    $(selector).click(function() {
+      $(this).hide();
+    });
+    $('.page-container-sample .btn-reset').click(function() {
+      $(selector).show();
+    }).clone().html('Inverse').insertAfter('.btn-reset').click(function() {
+      $(selector).toggle();
+    });
+  });
+</script>

@@ -12,18 +12,13 @@ module.exports = {
     var param = req.allParams();
 
     var navs = [
-        {route: 'text', name: 'Text Styling'},
-        {route: 'font', name: 'Font Styling'},
-        {route: 'color', name: 'Colors'},
-        {route: 'display', name: 'Display'},
-        {route: 'position', name: 'Positioning'},
-        {route: 'sizing', name: 'Sizing'},
-        {route: 'box-model', name: 'Box Model'},
-        {route: 'border', name: 'Borders'},
-        {route: 'overflow', name: 'Overflow'},
-        {route: 'float', name: 'Floats'},
-        {route: 'hover', name: 'Hover and Opacity'},
-        {route: 'cursor', name: 'Mouse Cursor'},
+        {route: 'show', name: 'Show / Hide'},
+        {route: 'fade', name: 'Fade In / Fade Out'},
+        {route: 'slide', name: 'Slide Down / Slide Up'},
+        {route: 'classes', name: 'CSS Classes'},
+        {route: 'styles', name: 'CSS Styling'},
+        {route: 'dimensions', name: 'Dimensions'},
+        {route: 'elements', name: 'Creating Elements'},
     ];
 
 

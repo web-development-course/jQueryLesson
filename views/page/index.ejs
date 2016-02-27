@@ -1,55 +1,98 @@
 <div class="container full-height">
-    <div class="row full-height">
-        <div class="box col-md-4">
-            <div class="page-container">
-                <ul class="nav nav-pills" style="padding: 10px;">
-                    <li role="presentation" class="<%= route.id=='welcome' ? 'active' : ''%>"><a href="welcome">CSS Lesson</a></li>
-                    <li role="presentation" class="dropdown">
-                        <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
-                        Choose a Page <span class="caret"></span>
-                        </a>
-                        <ul class="dropdown-menu">
-                            <% for (var nav, i=0; nav = navs[i]; i++) { %>
-                                <li role="presentation" class="<%= route.id==nav.route ? 'active' : ''%>"><a href="<%=nav.route%>"><%=nav.name%></a></li>
-                            <% } %>
-                        </ul>
-                    </li>
-                </ul>
-                <div class="page-header" style="text-align:center;">
-                    <% for (var nav, i=0; nav = navs[i]; i++) { %>
-                        <% if (route.id==nav.route) { %>
-                            <h1><%=nav.name%></h1>
-                        <% } %>
-                    <% } %>
-                </div>                    
-                <blockquote>
-                    <p>
-                        <%- partial( 'exercises/' + route.id + '.ejs') %>
-                    </p>
-                </blockquote>
-            </div>
+  <div class="row full-height">
+    <div class="box col-md-4">
+      <div class="page-container">
+        <ul class="nav nav-pills" style="padding: 10px;">
+          <li role="presentation" class="<%= route.id == 'welcome' ? 'active' : '' %>"><a href="welcome">CSS Lesson</a>
+          </li>
+          <li role="presentation" class="dropdown">
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true"
+               aria-expanded="false">
+              Choose a Page <span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu">
+              <% _.forEach(navs, function(nav, i) { %>
+              <li role="presentation" class="<%= route.id == nav.route ? 'active' : '' %>"><a
+                  href="<%= nav.route %>"><%= nav.name %></a></li>
+              <% }); %>
+            </ul>
+          </li>
+        </ul>
+        <div class="page-header" style="text-align:center;">
+          <% _.forEach(navs, function(nav, i) { %>
+          <% if (route.id == nav.route) { %>
+          <h1><%= nav.name %></h1>
+          <% } %>
+          <% }); %>
         </div>
-        <div class="box col-md-8">
-            <div class="row half-height">        
-                <div class="box col-md-12">
-                    <div class="page-container page-container-sample">
-                        <div class="element element-1 sample">Sample Element 1</div>
-                        <div class="element element-2 sample">Sample Element 2</div>
-                        <div class="element element-3 sample">Sample Element 3</div>
-                        <div class="element element-4 sample">Sample Element 4</div>
-                    </div>
-                </div>
-            </div>
-            <div class="row half-height">        
-                <div class="box col-md-12">
-                    <div class="page-container page-container-practice">
-                        <div class="element element-1 edit-me">Practice Element 1</div>
-                        <div class="element element-2 edit-me">Practice Element 2</div>
-                        <div class="element element-3 edit-me">Practice Element 3</div>
-                        <div class="element element-4 edit-me">Practice Element 4</div>
-                    </div>
-                </div>
-            </div>
-        </div>
+        <blockquote>
+          <p>
+            <%- partial('exercises/' + route.id + '.ejs') %>
+          </p>
+        </blockquote>
+      </div>
     </div>
+    <div class="box col-md-8">
+      <div class="row half-height">
+        <div class="box col-md-12">
+          <div class="page-container page-container-sample">
+            <a href="#" class="thumbnail thumbnail-1">
+              <div class="element element-1"></div>
+            </a>
+            <a href="#" class="thumbnail thumbnail-2">
+              <div class="element element-2"></div>
+            </a>
+            <a href="#" class="thumbnail thumbnail-3">
+              <div class="element element-3"></div>
+            </a>
+            <a href="#" class="thumbnail thumbnail-4">
+              <div class="element element-4"></div>
+            </a>
+
+            <br/>
+            <br/>
+            <button class="btn btn-default btn-reset" type="button">Reset</button>
+            <br/>
+            <br/>
+
+<!--
+            <label> Something here </label>
+            <div class="input-group">
+              <input type="text" class="form-control" placeholder="">
+              <span class="input-group-btn">
+                <button class="btn btn-default" type="button">Go!</button>
+              </span>
+            </div>
+            <div class="alert alert-success" role="alert"></div>
+-->
+          </div>
+        </div>
+      </div>
+      <div class="row half-height">
+        <div class="box col-md-12">
+          <div class="page-container page-container-practice">
+            <a href="#" class="thumbnail thumbnail-1">
+              <div class="element element-1"></div>
+            </a>
+            <a href="#" class="thumbnail thumbnail-2">
+              <div class="element element-2"></div>
+            </a>
+            <a href="#" class="thumbnail thumbnail-3">
+              <div class="element element-3"></div>
+            </a>
+            <a href="#" class="thumbnail thumbnail-4">
+              <div class="element element-4"></div>
+            </a>
+
+            <br/>
+            <br/>
+            <button class="btn btn-default btn-reset" type="button">Reset</button>
+            <br/>
+            <br/>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>

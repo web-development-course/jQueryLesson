@@ -1,5 +1,5 @@
 {
-  "name": "CssLesson",
+  "name": "jQueryLesson",
   "private": true,
   "version": "0.0.0",
   "description": "a Sails application",
@@ -30,7 +30,7 @@
   "main": "app.js",
   "repository": {
     "type": "git",
-    "url": "git://github.com/guyso/CssLesson.git"
+    "url": "git://github.com/guyso/jQueryLesson.git"
   },
   "author": "guyso",
   "license": ""
