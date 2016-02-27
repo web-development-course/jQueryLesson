@@ -1,0 +1,33 @@
+<p>
+    Set the content of any element
+    <br/>
+    <a href="http://lmgtfy.com/?q=jquery+html&l=1" target="_blank">View in W3Schools</a>
+    <br/>
+    <br/>
+    Common Usage:
+    <pre>
+$('.some-elem').html(); //getter
+$('.some-elem').html('value'); //setter
+$('.some-elem').text(); //getter
+$('.some-elem').text('value'); //setter
+$('.some-elem').val(); //getter
+$('.some-elem').val('value'); //setter
+
+parseInt(string); //turns the string into a number
+</pre>
+</p>
+<script>
+  $(function() {
+    var selector = ".page-container-sample .thumbnail .element";
+    $(selector).click(function() {
+      if ($(this).html()) {
+        $(this).html(parseInt($(this).html()) + 1);
+      } else {
+        $(this).html(1);
+      }
+    });
+    $('.page-container-sample .btn-reset').click(function() {
+      $(selector).html('');
+    });
+  });
+</script>

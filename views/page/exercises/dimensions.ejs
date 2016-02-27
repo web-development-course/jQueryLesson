@@ -1,0 +1,29 @@
+<p>
+    Change the dimensions of clicked elements
+    <br/>
+    <a href="http://lmgtfy.com/?q=jquery+dimensions&l=1" target="_blank">View in W3Schools</a>
+    <br/>
+    <br/>
+    Common Usage:
+    <pre>
+$('.some-elem').width(); //getter
+$('.some-elem').width(200); //setter
+$('.some-elem').innerWidth(); //getter
+$('.some-elem').outerWidth(); //getter
+$('.some-elem').height(); //getter
+$('.some-elem').height(200); //setter
+$('.some-elem').innerHeight(); //getter
+$('.some-elem').outerHeight(); //getter
+</pre>
+</p>
+<script>
+  $(function() {
+    var selector = ".page-container-sample .thumbnail .element";
+    $(selector).click(function() {
+      $(this).height($(this).height() + 10);
+    });
+    $('.page-container-sample .btn-reset').click(function() {
+      $(selector).height(60);
+    });
+  });
+</script>

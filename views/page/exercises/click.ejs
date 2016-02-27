@@ -1,0 +1,25 @@
+<p>
+    Assign a behaviour to the click event on an element
+    <br/>
+    <a href="http://lmgtfy.com/?q=jquery+click&l=1" target="_blank">View in W3Schools</a>
+    <br/>
+    <br/>
+    Common Usage:
+    <pre>
+$('.some-elem').click(function() {
+  $(this).doSomething;
+});
+alert("any string");
+</pre>
+</p>
+<script>
+  $(function() {
+    var selector = ".page-container-sample .thumbnail";
+    $(selector).click(function() {
+      alert("An element with class: '" + $(this).attr('class') + "' was clicked!");
+    });
+    $('.page-container-sample .btn-reset').click(function() {
+      alert("An element with class: '" + $(this).attr('class') + "' was clicked!");
+    });
+  });
+</script>

@@ -1,0 +1,30 @@
+<p>
+    Set a random background color to clicked elements
+    <br/>
+    <a href="http://lmgtfy.com/?q=jquery+css&l=1" target="_blank">View in W3Schools</a>
+    <br/>
+    <br/>
+    Common Usage:
+    <pre>
+$('.some-elem').css('property'); //getter
+$('.some-elem').css({ property: value }); //setter
+</pre>
+</p>
+<script>
+
+  function rnd255() {
+    return Math.floor(Math.random() * 255);
+  }
+  function rndBg() {
+    return "rgb(" + rnd255() + "," + rnd255() + "," + rnd255() + ")";
+  }
+  $(function() {
+    var selector = ".page-container-sample .thumbnail .element";
+    $(selector).click(function() {
+      $(this).css({'backgroundColor': rndBg()});
+    });
+    $('.page-container-sample .btn-reset').click(function() {
+      $(selector).css({'background-color' : ''});
+    });
+  });
+</script>

@@ -13,6 +13,10 @@ body {
   background: #666;
 }
 
+pre {
+  text-align: left;
+}
+
 .page-container {
   border: 1px solid #ccc;
   border-radius: 3px;
@@ -28,14 +32,17 @@ body {
 
     display: inline-block;
     padding: 4px;
-    margin: 10px;
+    margin: 7px;
+    vertical-align: top;
+    font-size: 30px;
+    text-decoration: none;
 
-    .element {
+  .element {
       box-sizing: border-box;
       color: #333;
-      transition: all 1s ease;
-      width: 100px;
-      height: 100px;
+      width: 60px;
+      height: 60px;
+      line-height: 60px;
     }
   }
 }
@@ -56,3 +63,10 @@ body {
   background: #FEA4C3;
 }
     
+.new-class {
+  border-color: #f00 !important;
+
+  .element {
+    opacity: 0.3;
+  }
+}
