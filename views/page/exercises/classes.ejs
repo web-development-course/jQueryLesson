@@ -10,6 +10,20 @@ $('.some-elem').addClass();
 $('.some-elem').removeClass();
 $('.some-elem').toggleClass();
 </pre>
+<br/>
+<label for="show-answer">(show/hide answer)</label>
+<input id="show-answer" type="checkbox"/>
+<pre>
+var selector = ".page-container-practice .thumbnail";
+$(selector).click(function() {
+  $(this).addClass('new-class');
+});
+$('.page-container-practice .btn-reset').click(function() {
+  $(selector).removeClass('new-class');
+}).clone().html('Inverse').insertAfter('.btn-reset').click(function() {
+  $(selector).toggleClass('new-class');
+});
+</pre>
 </p>
 <script>
   $(function() {

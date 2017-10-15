@@ -9,6 +9,27 @@
 $('.some-elem').css('property'); //getter
 $('.some-elem').css({ property: value }); //setter
 </pre>
+<br/>
+<label for="show-answer">(show/hide answer)</label>
+<input id="show-answer" type="checkbox"/>
+<pre>
+function rnd255() {
+  return Math.floor(Math.random() * 255);
+}
+function rndBg() {
+  return "rgb(" + rnd255() + "," + rnd255() + "," + rnd255() + ")";
+}
+$(function() {
+  var selector = ".page-container-practice .thumbnail .element";
+  $(selector).click(function() {
+    $(this).css({'backgroundColor': rndBg()});
+  });
+  $('.page-container-practice .btn-reset').click(function() {
+    $(selector).css({'background-color' : ''});
+  });
+});
+</pre>
+
 </p>
 <script>
 

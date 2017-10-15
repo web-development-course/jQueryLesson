@@ -17,6 +17,32 @@ pre {
   text-align: left;
 }
 
+label[for="show-answer"] {
+  float: left;
+  color: darkblue;
+  font-weight: normal;
+  font-size: 12px;
+  cursor: pointer;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+input#show-answer {
+  visibility: hidden;
+  clear: both;
+
+ ~ pre {
+    display: none;
+  }
+
+    &:checked ~ pre {
+    display: block;
+    overflow: auto;
+  }
+}
+
 .page-container {
   border: 1px solid #ccc;
   border-radius: 3px;
@@ -62,7 +88,7 @@ pre {
 .element-4 {
   background: #FEA4C3;
 }
-    
+
 .new-class {
   border-color: #f00 !important;
 

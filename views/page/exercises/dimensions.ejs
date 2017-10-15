@@ -15,6 +15,19 @@ $('.some-elem').height(200); //setter
 $('.some-elem').innerHeight(); //getter
 $('.some-elem').outerHeight(); //getter
 </pre>
+<br/>
+<label for="show-answer">(show/hide answer)</label>
+<input id="show-answer" type="checkbox"/>
+<pre>
+var selector = ".page-container-practice .thumbnail .element";
+$(selector).click(function() {
+  $(this).height($(this).height() + 10);
+});
+$('.page-container-practice .btn-reset').click(function() {
+  $(selector).height(60);
+});
+</pre>
+
 </p>
 <script>
   $(function() {

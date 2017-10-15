@@ -15,6 +15,23 @@ $('.some-elem').val('value'); //setter
 
 parseInt(string); //turns the string into a number
 </pre>
+<br/>
+<label for="show-answer">(show/hide answer)</label>
+<input id="show-answer" type="checkbox"/>
+<pre>
+var selector = ".page-container-practice .thumbnail .element";
+$(selector).click(function() {
+  if ($(this).html()) {
+    $(this).html(parseInt($(this).html()) + 1);
+  } else {
+    $(this).html(1);
+  }
+});
+$('.page-container-practice .btn-reset').click(function() {
+  $(selector).html('');
+});
+</pre>
+
 </p>
 <script>
   $(function() {

@@ -11,6 +11,19 @@ $('.some-elem').click(function() {
 });
 alert("any string");
 </pre>
+<br/>
+<label for="show-answer">(show/hide answer)</label>
+<input id="show-answer" type="checkbox"/>
+<pre>
+var selector = ".page-container-practice .thumbnail";
+$(selector).click(function() {
+  alert("An element with class: '" + $(this).attr('class') + "' was clicked!");
+});
+$('.page-container-practice .btn-reset').click(function() {
+  alert("An element with class: '" + $(this).attr('class') + "' was clicked!");
+});
+</pre>
+
 </p>
 <script>
   $(function() {

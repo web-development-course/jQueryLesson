@@ -10,6 +10,21 @@ $('.some-elem').show();
 $('.some-elem').hide();
 $('.some-elem').toggle();
 </pre>
+<br/>
+<label for="show-answer">(show/hide answer)</label>
+<input id="show-answer" type="checkbox"/>
+<pre>
+var selector = ".page-container-practice .thumbnail";
+$(selector).click(function() {
+  $(this).hide();
+});
+$('.page-container-practice .btn-reset').click(function() {
+  $(selector).show();
+}).clone().html('Inverse').insertAfter('.btn-reset').click(function() {
+  $(selector).toggle();
+});
+</pre>
+
 </p>
 <script>
   $(function() {
