@@ -16,7 +16,7 @@ $('.some-elem').toggleClass();
 <pre>
 var selector = ".page-container-practice .thumbnail";
 $(selector).click(function() {
-  $(this).addClass('new-class');
+  $(this).toggleClass('new-class');
 });
 $('.page-container-practice .btn-reset').click(function() {
   $(selector).removeClass('new-class');
@@ -29,7 +29,7 @@ $('.page-container-practice .btn-reset').click(function() {
   $(function() {
     var selector = ".page-container-sample .thumbnail";
     $(selector).click(function() {
-      $(this).addClass('new-class');
+      $(this).toggleClass('new-class');
     });
     $('.page-container-sample .btn-reset').click(function() {
       $(selector).removeClass('new-class');
